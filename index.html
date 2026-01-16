@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Panfleto de Pedido de Ajuda - Robson Dantas de Aguiar</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300,400,600,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg0:#07070b;
+      --bg1:#0c0b12;
+      --ink:#f4f1ea;
+      --muted:rgba(244,241,234,.78);
+      --gold:#d7b56d;
+      --radius: 22px;
+      --radius2: 14px;
+      --shadow: 0 24px 80px rgba(0,0,0,.55);
+      --max: 1050px;
+    }
+    *{ box-sizing:border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+      background: linear-gradient(180deg, var(--bg0), var(--bg1));
+      color: var(--ink);
+    }
+    body {
+      padding: 20px;
+    }
+    .container {
+      max-width: var(--max);
+      background: rgba(15,16,32,0.85);
+      border-radius: var(--radius);
+      padding: 24px 32px;
+      box-shadow: var(--shadow);
+      color: var(--ink);
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+    h1, h2, h3 {
+      font-family: 'Fraunces', serif;
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 2.4rem;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 16px;
+      color: var(--muted);
+    }
+    .highlight {
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .flex-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .text-section {
+      flex: 1 1 320px;
+    }
+    .image-section {
+      flex: 0 0 280px;
+      border-radius: var(--radius2);
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+    }
+    .image-section img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .pix-section {
+      margin-top: 24px;
+      background: rgba(244,241,234,0.06);
+      border: 1px solid rgba(244,241,234,0.12);
+      border-radius: var(--radius2);
+      padding: 16px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    }
+    .pix-key {
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+      color: var(--gold);
+      user-select: all;
+    }
+    .pix-name {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      color: var(--muted);
+    }
+    .qr-code {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+    }
+    canvas {
+      border-radius: var(--radius2);
+      background: white;
+      box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+    }
+    .howto {
+      margin-top: 24px;
+      background: rgba(244,241,234,0.04);
+      border: 1px solid rgba(244,241,234,0.12);
+      border-radius: var(--radius2);
+      padding: 16px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    .howto ol {
+      padding-left: 20px;
+      margin: 0;
+    }
+    .howto li {
+      margin-bottom: 8px;
+    }
+    .contact {
+      margin-top: 24px;
+      font-size: 1rem;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    footer {
+      margin-top: 32px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (max-width: 720px) {
+      .flex-row {
+        flex-direction: column;
+      }
+      .image-section {
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main" aria-label="Panfleto de pedido de ajuda financeira">
+    <div class="flex-row">
+      <section class="text-section">
+        <h1>Olá, meu nome é <span class="highlight">Robson Dantas de Aguiar</span></h1>
+        <h2>Estou passando por um momento muito difícil</h2>
+        <p>Estou desempregado e sou deficiente, enfrentando muitas dificuldades para garantir o básico do dia a dia, como alimentação, remédios e cuidados essenciais.</p>
+        <p>Sei que existem muitos golpes por aí, por isso quero ser transparente: meu PIX é o meu CPF:</p>
+        <p class="pix-key">601.884.564-49</p>
+        <p>Nome para conferência no PIX: <span class="highlight">Robson Dantas de Aguiar</span></p>
+        <p>Toda ajuda, por menor que seja, fará uma enorme diferença na minha vida. Com o seu apoio, poderei garantir o mínimo necessário para viver com dignidade enquanto busco uma nova oportunidade de trabalho.</p>
+        <p>Se desejar, posso apresentar documentos que comprovem minha condição e situação.</p>
+        <p class="contact">Contato: <a href="mailto:oficial.rdaguiar@gmail.com" style="color: var(--gold); text-decoration: underline;">oficial.rdaguiar@gmail.com</a></p>
+      </section>
+      <section class="image-section" aria-label="Imagem simbólica de pedido de ajuda pessoal">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mãos estendidas simbolizando pedido de ajuda" />
+      </section>
+    </div>
+
+    <section class="pix-section" aria-label="Informações do PIX para doação">
+      <h3>PIX para ajudar</h3>
+      <p class="pix-key">601.884.564-49</p>
+      <p class="pix-name">Nome no PIX: Robson Dantas de Aguiar</p>
+      <div class="qr-code" aria-label="QR Code do PIX">
+        <canvas id="qrCanvas" width="220" height="220" role="img" aria-label="QR Code para doação via PIX"></canvas>
+      </div>
+      <div class="howto">
+        <h3>Como ajudar com o PIX</h3>
+        <ol>
+          <li>Abra o aplicativo do seu banco ou carteira digital.</li>
+          <li>Escolha <strong>“Pagar com PIX”</strong>.</li>
+          <li>Aponte a câmera para o <strong>QR Code</strong> ou digite a chave: <strong>60188456449</strong>.</li>
+          <li>Confirme o nome: <strong>Robson Dantas de Aguiar</strong>.</li>
+          <li>Informe o valor que desejar e finalize o pagamento.</li>
+        </ol>
+      </div>
+    </section>
+
+    <footer>
+      <p>Obrigado pela sua atenção e solidariedade. Que Deus abençoe você e sua família!</p>
+    </footer>
+  </main>
+
+  <script>
+    const qrCanvas = document.getElementById('qrCanvas');
+    const ctx = qrCanvas.getContext('2d');
+
+    const pixKey = '60188456449';
+
+    const qrImage = new Image();
+    qrImage.alt = 'QR Code para doação via PIX';
+    qrImage.src = `https://chart.googleapis.com/chart?cht=qr&chs=220x220&chl=${encodeURIComponent(pixKey)}&chld=L|1`;
+    qrImage.onload = () => {
+      ctx.clearRect(0, 0, qrCanvas.width, qrCanvas.height);
+      ctx.drawImage(qrImage, 0, 0, qrCanvas.width, qrCanvas.height);
+    };
+    qrImage.onerror = () => {
+      ctx.font = '16px sans-serif';
+      ctx.fillStyle = '#000';
+      ctx.fillText('QR Code indisponível', 20, 110);
+    };
+  </script>
+</body>
+</html>
